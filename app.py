@@ -346,7 +346,7 @@ if model_name == "LDA":
     params["solver"] = st.sidebar.selectbox("Solver", ["svd", "lsqr", "eigen"])
 elif model_name == "QDA":
     params["reg_param"] = st.sidebar.slider(
-        "Regularization (reg_param)", 0.0, 1.0, 0.1, 0.05,
+        "Regularization (reg_param)", 0.01, 1.0, 0.1, 0.01,
         help="Raw pixel features are collinear (many border pixels are "
              "always 0); a small regularization value stabilizes QDA.",
     )
